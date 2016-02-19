@@ -1,60 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
     <title>Clmtrackr by mpelts</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
-
-    <header>
-      <div class="container">
+    <div class="wrapper">
+      <header>
         <h1>Clmtrackr</h1>
-        <h2>Javascript library for precise tracking of facial features via Constrained Local Models</h2>
+        <p>Javascript library for precise tracking of facial features via Constrained Local Models</p>
 
-        <section id="downloads">
-          <a href="https://github.com/mpelts/clmtrackr/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/mpelts/clmtrackr/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/mpelts/clmtrackr" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+        <p class="view"><a href="https://github.com/mpelts/clmtrackr">View the Project on GitHub <small>mpelts/clmtrackr</small></a></p>
 
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+        <ul>
+          <li><a href="https://github.com/mpelts/clmtrackr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mpelts/clmtrackr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mpelts/clmtrackr">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="clmtrackr" class="anchor" href="#clmtrackr" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>clmtrackr</h1>
+
+<p><img src="http://auduno.github.com/clmtrackr/media/clmtrackr_03.jpg" alt="tracked face"></p>
+
+<p><strong>clmtrackr</strong> is a javascript library for fitting facial models to faces in videos or images. It currently is an implementation of <em>constrained local models</em> fitted by <em>regularized landmark mean-shift</em>, as described in <a href="http://dl.acm.org/citation.cfm?id=1938021">Jason M. Saragih's paper</a>. <strong>clmtrackr</strong> tracks a face and outputs the coordinate positions of the face model as an array, following the numbering of the model below:</p>
+
+<p><a href="http://auduno.github.com/clmtrackr/media/facemodel_numbering_new.png"><img src="http://auduno.github.com/clmtrackr/media/facemodel_numbering_new_small.png" alt="facemodel_numbering"></a></p>
+
+<p><a href="http://auduno.github.io/clmtrackr/docs/reference.html">Reference</a> - <a href="http://auduno.tumblr.com/post/61888277175/fitting-faces">Overview</a></p>
+
+<p>The library provides some generic face models that were trained on <a href="http://www.milbo.org/muct/">the MUCT database</a> and some additional self-annotated images. Check out <a href="https://github.com/auduno/clmtools">clmtools</a> for building your own models.</p>
+
+<p>The library requires <a href="https://github.com/inspirit/jsfeat">jsfeat.js</a> (for initial face detection) and <a href="http://numericjs.com">numeric.js</a> (for matrix math).</p>
+
+<p>For tracking in video, it is recommended to use a browser with WebGL support, though the library should work on any modern browser.</p>
+
+<p>For some more information about Constrained Local Models, take a look at Xiaoguang Yan's <a href="https://sites.google.com/site/xgyanhome/home/projects/clm-implementation/ConstrainedLocalModel-tutorial%2Cv0.7.pdf?attredirects=0">excellent tutorial</a>, which was of great help in implementing this library.</p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li><a href="https://auduno.github.io/clmtrackr/clm_image.html">Tracking in image</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/clm_video.html">Tracking in video</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/examples/facesubstitution.html">Face substitution</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/face_mask.html">Face masking</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/examples/facedeform.html">Realtime face deformation</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/examples/clm_emotiondetection.html">Emotion detection</a></li>
+<li><a href="https://auduno.github.io/clmtrackr/examples/caricature.html">Caricature</a></li>
+</ul>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<p>Download the minified library <a href="https://github.com/auduno/clmtrackr/raw/dev/clmtrackr.js">clmtrackr.js</a> and one of the models, and include them in your webpage. <strong>clmtrackr</strong> depends on <a href="https://github.com/sloisel/numeric/"><em>numeric.js</em></a> and <a href="https://github.com/inspirit/jsfeat"><em>jsfeat.js</em></a>, but these are included in the minified library.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>/* clmtrackr libraries */
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/clmtrackr.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/model_pca_20_svm.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>The following code initiates the clmtrackr with the model we included, and starts the tracker running on a video element.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">video</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>inputVideo<span class="pl-pds">"</span></span> <span class="pl-e">width</span>=<span class="pl-s"><span class="pl-pds">"</span>400<span class="pl-pds">"</span></span> <span class="pl-e">height</span>=<span class="pl-s"><span class="pl-pds">"</span>300<span class="pl-pds">"</span></span> <span class="pl-e">autoplay</span> <span class="pl-e">loop</span>&gt;
+  &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>./media/somevideo.ogv<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>video/ogg<span class="pl-pds">"</span></span>/&gt;
+&lt;/<span class="pl-ent">video</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">var</span> videoInput <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>inputVideo<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">  <span class="pl-k">var</span> ctracker <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">clm.tracker</span>();</span>
+<span class="pl-s1">  <span class="pl-smi">ctracker</span>.<span class="pl-en">init</span>(pModel);</span>
+<span class="pl-s1">  <span class="pl-smi">ctracker</span>.<span class="pl-c1">start</span>(videoInput);</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>You can now get the positions of the tracked facial features as an array via <code>getCurrentPosition()</code>:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">function</span> <span class="pl-en">positionLoop</span>() {</span>
+<span class="pl-s1">    <span class="pl-en">requestAnimationFrame</span>(positionLoop);</span>
+<span class="pl-s1">    <span class="pl-k">var</span> positions <span class="pl-k">=</span> <span class="pl-smi">ctracker</span>.<span class="pl-en">getCurrentPosition</span>();</span>
+<span class="pl-s1">    <span class="pl-c">// positions = [[x_0, y_0], [x_1,y_1], ... ]</span></span>
+<span class="pl-s1">    <span class="pl-c">// do something with the positions ...</span></span>
+<span class="pl-s1">  }</span>
+<span class="pl-s1">  <span class="pl-en">positionLoop</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>You can also use the built in function <code>draw()</code> to draw the tracked facial model on a canvas :</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">canvas</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>drawCanvas<span class="pl-pds">"</span></span> <span class="pl-e">width</span>=<span class="pl-s"><span class="pl-pds">"</span>400<span class="pl-pds">"</span></span> <span class="pl-e">height</span>=<span class="pl-s"><span class="pl-pds">"</span>300<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">canvas</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">var</span> canvasInput <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>canvas<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">  <span class="pl-k">var</span> cc <span class="pl-k">=</span> <span class="pl-smi">canvasInput</span>.<span class="pl-en">getContext</span>(<span class="pl-s"><span class="pl-pds">'</span>2d<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">  <span class="pl-k">function</span> <span class="pl-en">drawLoop</span>() {</span>
+<span class="pl-s1">    <span class="pl-en">requestAnimationFrame</span>(drawLoop);</span>
+<span class="pl-s1">    <span class="pl-smi">cc</span>.<span class="pl-en">clearRect</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-smi">canvasInput</span>.<span class="pl-c1">width</span>, <span class="pl-smi">canvasInput</span>.<span class="pl-c1">height</span>);</span>
+<span class="pl-s1">    <span class="pl-smi">ctracker</span>.<span class="pl-en">draw</span>(canvasInput);</span>
+<span class="pl-s1">  }</span>
+<span class="pl-s1">  <span class="pl-en">drawLoop</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>See the complete example <a href="https://auduno.github.com/clmtrackr/example.html">here</a>.</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p><strong>clmtrackr</strong> is distributed under the <a href="http://www.opensource.org/licenses/MIT">MIT License</a></p>
       </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mpelts">mpelts</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
